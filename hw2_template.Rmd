@@ -1,0 +1,123 @@
+---
+title: "Does a relationship exist?"
+author: Becky Driver
+date: 10/6/2023
+output:
+  #pdf_document: default
+  html_document: default
+---
+
+__Directions__: You are encouraged to work together! Write your solutions in Rmarkdown and submit your solutions as a rendered HTML or PDF file. Only (sufficiently well done) HTML or PDF submissions will be counted as complete. Install packages in your R console and only load them in your markdown file. Installing packages in your markdown file will create an error. 
+
+
+1. Explain whether each of the statements below is a fact or a correlation? Justify your answer. 
+
+a.  Most top performing schools have small student bodies.
+
+
+<span style="color: blue;"> Fact. It does not say whether non-top-performing schools have small or large student bodies.</span>
+
+b.  Married people are typically happier than unmarried people.
+
+<span style="color: blue;"> Correlation. Being happier tend to happen with being married.</span>
+
+```{r, echo=FALSE}
+marriage <- matrix(c("x","","","x"), ncol=2,byrow=TRUE)
+colnames(marriage) <- c("Happier", "Less Happy")
+rownames(marriage) <- c("Married", "Unmarried")
+marriage <- as.table(marriage)
+marriage
+```
+c. Among professionals, taller basketball players tend to have lower free-throw percentages than shorter players.
+
+<span style="color: blue;">Correlation. Professional players who are taller </span>
+
+```{r, echo=FALSE}
+ball <- matrix(c("","x","x",""), ncol=2,byrow=TRUE)
+colnames(ball) <- c("More free-throw", "Less free-throw")
+rownames(ball) <- c("Taller", "Shorter")
+ball <- as.table(ball)
+ball
+```
+
+d. The locations in the U.S. with the highest cancer rates are typically small towns.
+
+<span style="color: blue;">Fact. It's trying to suggest that being a small town is correlated to having the highest cancer rates. Although "Typically" means more small towns are having highest cancer rates, but it could be there are more small towns than large towns.</span>
+
+e. Older houses are more likely to have lead paint than newer ones.
+
+<span style="color: blue;">Correlation.</span>
+
+```{r, echo=FALSE}
+lead <- matrix(c("x","","","x"), ncol=2,byrow=TRUE)
+colnames(lead) <- c("More likely to have lead", "Less likely to have lead")
+rownames(lead) <- c("Older", "Newer")
+lead <- as.table(lead)
+lead
+```
+
+f.  Most colds caught in Lane County are caught on cold days.
+
+<span style="color: blue;">Facts. Maybe there are more cold days than warm days in Lane county.</span>
+
+2. Comment on each of the graphs below. What does it tell us? What kind of graph is it? What is the x-axis? What is the y-axis? Is the graph misleading? Why? (Based on BW book)
+
+Note: You do not need to include the figures in your responses so I have cut them from the template.
+
+a. FRED graph
+
+
+b. Covid Cases
+
+
+
+c.Taxes
+
+d. Hours of Work
+
+e.Gun Deaths in Florida
+
+f. Ready for Retirement?
+
+3. In class, we used the National Longitudinal Survey of Youth 1979 to measure the correlation between income and years of education.
+
+The data file `nlsy79.csv` includes this information and some additional variables we may use later in the course. A description of the variables in the data is in the table below.
+
+--------------------------------------------------------------------------------
+ Name                 Description
+ -------------------- ----------------------------------------------------------
+ `CASEID`               Unique identifier
+
+ `earn2009`               Earnings in 2009
+
+ `hgc`                 Years of education
+
+ `race`                Race and Ethnicity
+
+ `sex`                Gender
+
+ `bmonth`              Birth Month
+
+ `byear`               Birth Year
+
+ `afqt`               Armed Forces Qualifying Test Percentile
+
+ `region_1979`               Region
+
+ `faminc1978`              Family Income in 1978
+
+ `nsibs79`               Number of Siblings
+
+
+
+ --------------------------------------------------------------------------------
+
+
+
+ a. Re-code everyone who has 8 or fewer years of education as 8 in the data. We will interpret this category as "8 years or less".
+
+ b. Use ggplot to make a bar chart showing the share of the sample with each level of education. What percentage of the population has 17 years of education or more?
+
+ c. Use ggplot to make a scatterplot showing the relationship between earnings and education (recoded as in part a), include the line of best fit. What is the relationship between earnings and educcation?
+
+ d. Use ggplot to make a figure showing the average earnings by years of education with the line of best fit. Comment on how well the line of best fit matches the average earnings data. 
