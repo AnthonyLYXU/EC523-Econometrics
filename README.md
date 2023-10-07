@@ -10,5 +10,4 @@ Assignment!
 Blog posting!
 
 
-
-sssssssssssssssssssssssssssssss
+# Assignment 2 has been posted! Come and check it!
