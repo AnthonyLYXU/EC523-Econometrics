@@ -1,13 +1,6 @@
 # Welcome to GitHub Desktop!
 
 This is your README. READMEs are where you can communicate what your project is and how to use it.
-
-Write your name on line 6, save it, and then head back to GitHub Desktop.
 Good to learn R programing in the EC523!
 
-Homework!
-Assignment!
-Blog posting!
-
-
-# Assignment 2 has been posted! Come and check it!
+# I finished half of the Assignment 3, can anyone help wuth the second question?
